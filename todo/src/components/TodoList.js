@@ -5,6 +5,7 @@ import Todo from './Todo';
 
 const TodoList = props => {
     //for sorting the list based on completed or not
+    console.log(props.todos);
     return (
         <div>
             <div className='todo-list'>
