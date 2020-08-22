@@ -19,14 +19,14 @@ const App = () => {
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   // constructor() {
-  //   super();
-  //   this.state = {
-  //     todos
-  //   }
-  // }
-
-  const [todos, setTodos] = useState([]);
+    //   super();
+    //   this.state = {
+      //     todos
+      //   }
+      // }
+      
   const [state, dispatch] = useReducer(todoReducer, initialState);
+  const [todos, setTodos] = useState([]);
 
 
   //class method to update state
@@ -47,18 +47,19 @@ const App = () => {
   };
 
   //class method to add a todo item
-  const addTodo = todo => {
-    const newTodo = {
-      name: todo,
-      id: Date.now(),
-      completed: false
-    };
-    setTodos(
-      [...todos, newTodo]
-    );
-    console.log(newTodo);
-  };
-console.log(todos);
+  // const addTodo = todo => {
+    // const newTodo = {
+    //   name: todo,
+    //   id: Date.now(),
+    //   completed: false
+    // };
+//     setTodos(
+//       [...todos, newTodo]
+//     );
+//     console.log(newTodo);
+//   };
+// console.log(todos);
+
   const clearCompleted = e => {
     e.preventDefault();
     setTodos(
@@ -81,13 +82,22 @@ console.log(todos);
       <div className='container'>
         <div className='header'>
           <h2>Welcome to your Todo App!</h2>
-          <TodoForm addTodo={addTodo}/>
+          <TodoForm 
+          // addTodo={addTodo}
+          UPDATE_TODO={UPDATE_TODO}
+          dispatch={dispatch}
+          />
         </div>
           <TodoList
             todos={todos}
-            toggleTodo={toggleTodo}
-            clearCompleted={clearCompleted}
-            clearAll={clearAll}
+            // toggleTodo={toggleTodo}
+            // clearCompleted={clearCompleted}
+            // clearAll={clearAll}
+            TOGGLE_TODO={TOGGLE_TODO}
+            CLEAR_COMPLETED={CLEAR_COMPLETED}
+            CLEAR_ALL={CLEAR_ALL}
+            state={state}
+            dispatch={dispatch}
           />
       </div>
     );

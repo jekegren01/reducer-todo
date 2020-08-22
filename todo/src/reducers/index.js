@@ -5,15 +5,22 @@ export const CLEAR_COMPLETED = "CLEAR_COMPLETED";
 export const CLEAR_ALL = "CLEAR_ALL";
 
 export const initialState = {
-    name: '',
-    id: Date.now(),
-    completed: false
+    todos: [
+        {
+            name: '',
+            id: Date.now(),
+            completed: false
+        }
+    ]
 }
 
 export const todoReducer = (state, action) => {
     switch (action.type) {
         case UPDATE_TODO:
-            return { ...state, todo: action.payload, completed: false };
+            return {
+                ...state,
+                todos: [...state.todos, action.payload]
+            };
         case TOGGLE_TODO:
             return {
                 ...state,
@@ -28,6 +35,11 @@ export const todoReducer = (state, action) => {
             return {
                 ...state,
                 todos: state.todos.filter(todo => !todo.completed)
+            }
+        case CLEAR_ALL:
+            return {
+                ...state, 
+                todos: state.todos.filter(todos => !todos)
             }
         default: 
             return state;
