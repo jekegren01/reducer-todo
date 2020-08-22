@@ -1,4 +1,4 @@
-# Module Project: The Reducer Pattern - Reducer Todo
+<!-- # Module Project: The Reducer Pattern - Reducer Todo
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored the reducer pattern. During the module, you studied what immutability is, what reducers, actions and dispatch are, and how to use the reducer hook. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
@@ -89,5 +89,5 @@ After finishing your required elements, you can push your work further. These go
 - Have fun with the styling. Make this something you'd be proud to show off!
 
 ## Submission Format
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
+<!-- <!-- * [ ] Submit a Pull-Request to merge `<firstName-lastName> Branch into `main` (student's  Repo). **Please don't merge your own pull request** -->
+<!-- * [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR -->
