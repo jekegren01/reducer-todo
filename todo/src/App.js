@@ -3,6 +3,15 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import './components/Todo.css';
 
+import {
+  todoReducer,
+  initialState,
+  UPDATE_TODO,
+  TOGGLE_TODO,
+  CLEAR_COMPLETED,
+  CLEAR_ALL
+} from './reducers';
+
 // const todos = [];
 
 const App = () => {
@@ -16,7 +25,8 @@ const App = () => {
   //   }
   // }
 
-  const [ todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);
+  const [state, dispatch] = useReducer(todoReducer, initialState);
 
 
   //class method to update state
