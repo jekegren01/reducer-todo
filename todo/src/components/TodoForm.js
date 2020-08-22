@@ -39,7 +39,7 @@ const TodoForm = props => {
                 <input
                     type='text'
                     name='todo'
-                    // value={todo}
+                    value={todo}
                     onChange={handleChanges} 
                 />
                 <button>Add Todo</button>
